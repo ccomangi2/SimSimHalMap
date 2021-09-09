@@ -4,10 +4,10 @@
     package="com.example.simsimhalmap"
     tools:ignore="CoarseFineLocation">
 
-    <uses-permission android:name="android.permission.INTERNET">
-    </uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
-    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.NFC"></uses-permission>
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -26,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MapActivity" />
         <meta-data android:name="com.kakao.sdk.AppKey" android:value="5fa1db4d0686fa5d6abb03c8c91847d3"/>
     </application>
 

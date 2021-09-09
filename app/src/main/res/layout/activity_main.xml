@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/map_view"
+    <Button
+        android:id="@+id/map_btn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:text="지도" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/nfc_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="교통카드" />
+
+    <Button
+        android:id="@+id/bus_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="버스" />
+
+    <Button
+        android:id="@+id/train_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="지하철" />
+</LinearLayout>

@@ -1,26 +1,38 @@
 package com.example.simsimhalmap
 
+import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Base64
-import android.util.Log
 import android.view.View
-import android.view.ViewGroup
 import androidx.annotation.RequiresApi
-import kotlinx.android.synthetic.main.activity_main.*
-import net.daum.mf.map.api.MapView
-import java.security.MessageDigest
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity(), View.OnClickListener {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mapView = MapView(this)
-        val mapViewContainer = map_view as ViewGroup
 
-        mapViewContainer.addView(mapView)
+    }
+
+    override fun onClick(v: View?) {
+        when(v?.id) {
+            R.id.map_btn -> {
+                val intent = Intent(this, MapActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nfc_btn -> {
+                val intent = Intent(this, NfcActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.bus_btn -> {
+                val intent = Intent(this, BusActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.train_btn -> {
+                val intent = Intent(this, TrainActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }
