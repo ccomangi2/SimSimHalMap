@@ -15,6 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.SimSimHalMap">
         <activity
             android:name=".MainActivity"
@@ -25,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="47f33d23d0a43a95e33fe554d735805d"/>
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="5fa1db4d0686fa5d6abb03c8c91847d3"/>
     </application>
 
 </manifest>
